@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Body from "./components/Body/Body";
+import { Card } from "react-bootstrap";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [list, setList] = useState([]);
+
+  useEffect(() => {
+    getList();
+  }, []);
+
+  const getList = () => {
+    console.log("get list!");
+    axios
+      .get("/todo")
+      .then((response) => {
+        console.log(response.data);
+        setList(response.data);
+      })
+      .catch((err) => {
+        alert("error!");
+        console.log(err);
+      });
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Body list={list} getList={getList} />
     </div>
   );
 }
