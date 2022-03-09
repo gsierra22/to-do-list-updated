@@ -2,12 +2,12 @@ Hello! Currently this project is very bare bones but I plan to regularly update 
 
 ### Technologies
 
-Javascript
-CSS
-HTML
-Boostrap
-React
-Express
+Javascript,
+CSS,
+HTML,
+Boostrap,
+React,
+Express,
 Node.js
 
 ### Issues
