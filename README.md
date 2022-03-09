@@ -9,3 +9,7 @@ Boostrap
 React
 Express
 Node.js
+
+### Issues
+
+This is the second version of my updated to do list. I believe I made an error during the original dependency installations and I did not realize this error until I was well into my project. I remade the project in order to test my installations. The test project worked so I decided to force push my test project into the repository since it was too late to create a separate branch.
