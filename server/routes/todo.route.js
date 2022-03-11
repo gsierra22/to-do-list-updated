@@ -45,4 +45,19 @@ router.delete("/:id", (req, res) => {
     });
 });
 
+router.put("/:id", (req, res) => {
+  console.log("/todo PUT:", req.params);
+  const queryString = `UPDATE "list" SET "task_completed"=true WHERE id=$1;`;
+  const values = [req.params.id];
+  pool
+    .query(queryString, values)
+    .then((results) => {
+      res.send("put route!");
+    })
+    .catch((err) => {
+      console.log(err);
+      res.sendStatus(500);
+    });
+});
+
 module.exports = router;
