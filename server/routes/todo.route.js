@@ -32,18 +32,17 @@ router.post("/", (req, res) => {
 
 router.delete("/:id", (req, res) => {
   console.log("/todo Delete:", req.params);
-  res.send("delete!");
-  // const queryString = `INSERT INTO "list"("tasks") VALUES( $1 );`;
-  // const values = [req.body.tasks];
-  // pool
-  //   .query(queryString, values)
-  //   .then((results) => {
-  //     res.send(results.rows);
-  //   })
-  //   .catch((err) => {
-  //     console.log(err);
-  //     res.sendStatus(500);
-  //   });
+  const queryString = `DELETE FROM "list" WHERE ID=$1;`;
+  const values = [req.params.id];
+  pool
+    .query(queryString, values)
+    .then((results) => {
+      res.send("delete route!");
+    })
+    .catch((err) => {
+      console.log(err);
+      res.sendStatus(500);
+    });
 });
 
 module.exports = router;
