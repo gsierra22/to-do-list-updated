@@ -1,4 +1,26 @@
-Hello! Currently this project is very bare bones but I plan to regularly update it and remake my to do list that was originally in JQuery. For my most recent update I created a server and connect it to the database.
+## To Do List
+
+In this simple App I user can view a list of tasks they need to complete, add new tasks, mark tasks as completed, and delete them afterwards. I remade this app in react from it's original version using JQuery. The original can be viewed at the following link: https://github.com/gsierra22/weekend-sql-to-do-list . Next I am hoping on finishing up the app's syling with Bootstrap and adding redux and saga into it.
+
+## Prerequisites
+
+Before you get started, make sure you have the following software installed on your computer:
+
+- [Node.js](https://nodejs.org/en/)
+- [PostrgeSQL](https://www.postgresql.org/)
+- [Nodemon](https://nodemon.io/)
+
+## Create database and table
+
+Create a new database called `to-do-list` and utilize the database.sql page to create the table
+
+## Development Setup Instructions
+
+- Run `npm install`
+- Start postgres if not running already by using `brew services start postgresql`
+- Run `npm run server`
+- Run `npm run client`
+- Navigate to `localhost:3000`
 
 ### Technologies
 
