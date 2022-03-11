@@ -14,13 +14,23 @@ function Item(props) {
         console.log( err );
     })
 }
+
+const completeTask = () =>{
+  axios.put( `/todo/${ props.item.id}` ).then( ( response )=>{
+      console.log( 'PUT: Change!', response ); 
+      props.getList();
+  }).catch( (err)=>{
+      alert( 'Error in PUT' );
+      console.log( err );
+  })
+}
   return (
     <div>
       <h1>{props.item.tasks}</h1>
       {
         props.item.task_completed?
         <p>Complete!</p>:
-        <p>Must Finish</p>
+        <p>Must Finish<button onClick={completeTask}>Task Completed!</button></p>
 
       }
       <button onClick={deleteTask}>Delete!</button>
