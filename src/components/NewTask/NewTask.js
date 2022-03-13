@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import react from "react";
 import axios from "axios";
+import "./NewTask.css";
 
 function NewTask(props) {
   const [newTask, setNewTask] = useState({
@@ -32,7 +33,9 @@ function NewTask(props) {
         placeholder="name"
         onChange={(event) => updateNewTask(event)}
       ></input>
-      <button onClick={addTask}>Add Task</button>
+      <button className="TaskButton" onClick={addTask}>
+        Add Task
+      </button>
     </div>
   );
 }

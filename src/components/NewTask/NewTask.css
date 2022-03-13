@@ -1,0 +1,11 @@
+.TaskButton {
+  border-radius: 25px;
+  font-size: small;
+  min-height: 50px;
+  min-width: 100px;
+}
+
+.TaskButton:hover {
+  background-color: #0d2bd3;
+  color: white;
+}
