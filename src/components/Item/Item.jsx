@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import react from "react";
 import axios from "axios";
 import "./Item.css";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Modal } from "react-bootstrap";
 
 function Item(props) {
   //const [name, setName]=useState(null);
@@ -16,6 +16,7 @@ function Item(props) {
         console.log( err );
     })
 }
+
 
 const completeTask = () =>{
   axios.put( `/todo/${ props.item.id}` ).then( ( response )=>{
@@ -32,10 +33,15 @@ const completeTask = () =>{
     <Card className="Card">
       <Card.Header className="Header" >{props.item.tasks}</Card.Header>
       <Card.Body>
+        <p></p>
       {
         props.item.task_completed?
         <p>Complete!</p>:
-        <p>Must Finish<button onClick={completeTask}>Task Completed!</button></p>
+        <div>Must Finish 
+          <p>
+          <Button className="ItemButton" onClick={completeTask}>Task Completed!</Button>
+          </p>
+          </div>
 
       }
       <Button className="ItemButton" onClick={deleteTask}>Delete!</Button>
