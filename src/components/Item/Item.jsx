@@ -27,10 +27,11 @@ const completeTask = () =>{
   })
 }
   return (
+
+    <div className="Item">
     <Card className="Card">
-    <div>
-      
-      <h1>{props.item.tasks}</h1>
+      <Card.Header>{props.item.tasks}</Card.Header>
+      <Card.Body>
       {
         props.item.task_completed?
         <p>Complete!</p>:
@@ -38,8 +39,9 @@ const completeTask = () =>{
 
       }
       <button onClick={deleteTask}>Delete!</button>
+      </Card.Body>
+      </Card>
     </div>
-    </Card>
   );
 }
 
