@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import react from "react";
 import axios from "axios";
+import "./Item.css";
+import { Card } from "react-bootstrap";
 
 function Item(props) {
   //const [name, setName]=useState(null);
@@ -25,7 +27,9 @@ const completeTask = () =>{
   })
 }
   return (
+    <Card className="Card">
     <div>
+      
       <h1>{props.item.tasks}</h1>
       {
         props.item.task_completed?
@@ -35,6 +39,7 @@ const completeTask = () =>{
       }
       <button onClick={deleteTask}>Delete!</button>
     </div>
+    </Card>
   );
 }
 

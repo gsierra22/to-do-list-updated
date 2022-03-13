@@ -9,11 +9,9 @@ function Body(props) {
   //const [name, setName]=useState(null);
   return (
     <div>
-      <Card className="Card">
-        <h1 className="Header">To Do!</h1>
-        <NewTask getList={props.getList} />
-        <ItemList list={props.list} getList={props.getList} />
-      </Card>
+      <h1 className="Header">To Do!</h1>
+      <NewTask getList={props.getList} />
+      <ItemList list={props.list} getList={props.getList} />
     </div>
   );
 }
