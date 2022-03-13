@@ -1,1 +1,21 @@
+.Input-Div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around !important;
+  margin-bottom: 1cm;
+}
 
+.Input-Header {
+  background-color: red;
+  font-size: xx-large;
+}
+
+.Input-Card {
+  background-color: pink;
+  width: 8cm !important;
+  min-width: 120px;
+  min-height: 150px;
+  max-width: 185px;
+  max-height: 258px;
+  border-radius: 10%;
+}
