@@ -1,11 +1,33 @@
 .Item {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around !important;
   margin-bottom: 1cm;
 }
 
 .Card {
   background-color: pink;
   width: 8cm !important;
+  min-width: 120px;
+  min-height: 150px;
+  max-width: 185px;
+  max-height: 258px;
+  border-radius: 10%;
+}
+
+.Header {
+  background-color: red;
+  font-size: xx-large;
+}
+
+.ItemButton {
+  border-radius: 25px;
+  font-size: small;
+  min-height: 50px;
+  min-width: 100px;
+}
+
+.ItemButton:hover {
+  background-color: #0d2bd3;
+  color: white;
 }

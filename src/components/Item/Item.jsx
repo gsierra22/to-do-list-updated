@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import react from "react";
 import axios from "axios";
 import "./Item.css";
-import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 
 function Item(props) {
   //const [name, setName]=useState(null);
@@ -30,7 +30,7 @@ const completeTask = () =>{
 
     <div className="Item">
     <Card className="Card">
-      <Card.Header>{props.item.tasks}</Card.Header>
+      <Card.Header className="Header" >{props.item.tasks}</Card.Header>
       <Card.Body>
       {
         props.item.task_completed?
@@ -38,7 +38,7 @@ const completeTask = () =>{
         <p>Must Finish<button onClick={completeTask}>Task Completed!</button></p>
 
       }
-      <button onClick={deleteTask}>Delete!</button>
+      <Button className="ItemButton" onClick={deleteTask}>Delete!</Button>
       </Card.Body>
       </Card>
     </div>
