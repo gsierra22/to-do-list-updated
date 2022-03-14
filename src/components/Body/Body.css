@@ -1,7 +1,7 @@
 .Input-Div {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around !important;
+  justify-content: center !important;
   margin-bottom: 1cm;
 }
 
@@ -18,4 +18,9 @@
   max-width: 185px;
   max-height: 325px;
   border-radius: 10%;
+}
+
+.navbar {
+  height: 50px;
+  background-color: red;
 }
