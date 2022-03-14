@@ -1,6 +1,6 @@
 ## To Do List
 
-In this simple App I user can view a list of tasks they need to complete, add new tasks, mark tasks as completed, and delete them afterwards. I remade this app in react from it's original version using JQuery. The original can be viewed at the following link: https://github.com/gsierra22/weekend-sql-to-do-list . Next I am hoping on finishing up the app's syling with Bootstrap and adding redux and saga into it.
+In this simple App I user can view a list of tasks they need to complete, add new tasks, mark tasks as completed, and delete them afterwards. I remade this app in react from it's original version using JQuery. The original can be viewed at the following link: https://github.com/gsierra22/weekend-sql-to-do-list. This is still a work in Progress. Next I am hoping on finishing up the app's syling with Bootstrap and adding redux and saga into it.
 
 ## Prerequisites
 
