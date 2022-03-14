@@ -24,3 +24,11 @@
   height: 50px;
   background-color: red;
 }
+
+.diamonds {
+  color: pink;
+  font-size: xx-large !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around !important;
+}
