@@ -28,9 +28,10 @@ function NewTask(props) {
   };
   return (
     <div>
-      <h1>Create New Task </h1>
       <Form>
-        <Form.Label>Enter a New Task! :)</Form.Label>
+        <h1>
+          <Form.Label>Enter a New Task! :)</Form.Label>
+        </h1>
         <p></p>
         <Form.Control
           type="text"
