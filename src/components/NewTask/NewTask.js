@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import react from "react";
 import axios from "axios";
 import "./NewTask.css";
+import { Form } from "react-bootstrap";
 
 function NewTask(props) {
   const [newTask, setNewTask] = useState({
@@ -28,14 +29,19 @@ function NewTask(props) {
   return (
     <div>
       <h1>Create New Task </h1>
-      <input
-        type="text"
-        placeholder="name"
-        onChange={(event) => updateNewTask(event)}
-      ></input>
-      <button className="TaskButton" onClick={addTask}>
-        Add Task
-      </button>
+      <Form>
+        <Form.Label>Enter a New Task! :)</Form.Label>
+        <p></p>
+        <Form.Control
+          type="text"
+          placeholder="Your New Task!"
+          onChange={(event) => updateNewTask(event)}
+        ></Form.Control>
+        <p></p>
+        <button className="TaskButton" onClick={addTask}>
+          Add Task
+        </button>
+      </Form>
     </div>
   );
 }
